@@ -10,3 +10,24 @@ Draft on components (all abstract classes)
   - If possible, manages when to elastially create/eliminate instances
   - Handles the configuration of the whole workforce
 
+* Worker
+  - The thread/process that actually does the work
+
+* Url Queue Manager
+  - Enqueues/dequeues urls
+  - If possible, consider priority queue
+  - Storage system is a separate module
+  
+* Document Processor
+  - Processes document, such as extracts key info, get new urls
+  - Probably this guy will decide which new urls to enqueue
+  - Create initial index for content
+
+* Index Accessor
+  -  Access the storage system for index (such as hbase/lucene)
+
+* Storage Accessor
+  - Access (write) the caching storage (such as S3)
+
+* Monitor
+  - Monitors progress
