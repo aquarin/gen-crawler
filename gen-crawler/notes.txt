@@ -1,1 +1,12 @@
 Generic crawler project
+
+Draft on components (all abstract classes)
+
+* Bootstrapper
+  - One point entry for all other components
+
+* Process Manager
+  - Creates threads or processes or even VM instances, to do the actual works
+  - If possible, manages when to elastially create/eliminate instances
+  - Handles the configuration of the whole workforce
+
