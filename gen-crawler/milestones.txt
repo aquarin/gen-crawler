@@ -1,0 +1,5 @@
+* M1
+  - Single instance crawler running
+  - With GCS/GDS as cache storage/index (why GCP as storage provider? To get familiar with own product)
+  - With GDS or CloudSQL as queue.
+  - Learn how to do polymorphism in node.js

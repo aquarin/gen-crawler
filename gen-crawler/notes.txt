@@ -8,6 +8,13 @@ Technology considerations
 * Storage/Index
   - Preferrably self-maintained Hadoop cluster.
 
+* Language choice
+  - Node.js 
+
+Priorities
+---------------
+* Use on-demand services, or install services to one VM instance?
+
 Draft on components (all abstract classes)
 ----------------
 * Bootstrapper
