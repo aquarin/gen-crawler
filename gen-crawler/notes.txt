@@ -1,7 +1,15 @@
 Generic crawler project
 
-Draft on components (all abstract classes)
+Technology considerations
+----------------
+* Cloud Choice
+  - Indepdennt of cloud choice. Aliyun, AWS, GCP, all okay.
 
+* Storage/Index
+  - Preferrably self-maintained Hadoop cluster.
+
+Draft on components (all abstract classes)
+----------------
 * Bootstrapper
   - One point entry for all other components
 
