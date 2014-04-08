@@ -32,7 +32,10 @@ Draft on components (all abstract classes)
   - Enqueues/dequeues urls
   - If possible, consider priority queue
   - Storage system is a separate module
-  
+
+* Document Fetcher
+  - Fetches the document from the web
+    
 * Document Processor
   - Processes document, such as extracts key info, get new urls
   - Probably this guy will decide which new urls to enqueue
