@@ -1,5 +1,5 @@
 package com.aquarin.crawler;
 
-public class AbstractStorageAccessor {
+public abstract class AbstractStorageAccessor {
 
 }

@@ -1,5 +1,5 @@
 package com.aquarin.crawler;
 
-public class AbstractManager {
+public abstract class AbstractManager {
 
 }
