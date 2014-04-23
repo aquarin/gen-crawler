@@ -1,5 +1,6 @@
 package com.aquarin.crawler;
 
-public class AbstractQueueAccessor {
-
+public abstract class AbstractQueueAccessor {
+  public abstract AbstractTask dequeue();
+  public abstract void enqueue(AbstractTask task);
 }
