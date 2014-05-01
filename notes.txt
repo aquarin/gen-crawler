@@ -49,9 +49,15 @@ Draft on components (all abstract classes)
 
 * Monitor
   - Monitors progress
-  
-  
-  
+
+
+Underlying Architecture Accessors
+================================
+* Google Datastore Accessor
+  - Design of indices
+  - Design of columns
+  - Retrieval based on sorted index (priority queue?) 
+
 Misc Concerns
 -----------------------------------
 * How to handle HTTPS
