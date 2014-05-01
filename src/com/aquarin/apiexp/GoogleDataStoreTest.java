@@ -43,7 +43,7 @@ public class GoogleDataStoreTest {
       	
       	Key.Builder key = Key.newBuilder().addPathElement(
             Key.PathElement.newBuilder()
-            .setKind("shuishiytestkind1")
+            .setKind("testcrawlertask")
             .setName(String.format("%d", i + 1)));
       	
         // Set the transaction to commit.
