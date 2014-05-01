@@ -49,3 +49,15 @@ Draft on components (all abstract classes)
 
 * Monitor
   - Monitors progress
+  
+  
+  
+Misc Concerns
+-----------------------------------
+* How to handle HTTPS
+
+* Impersonate user browser
+
+* Depth control
+
+* Non-link website navigations, such as input search or click drop down menu.
