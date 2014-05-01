@@ -57,3 +57,19 @@ Underlying Architecture Accessors
   - Design of indices
   - Design of columns
   - Retrieval based on sorted index (priority queue?) 
+
+Misc Concerns
+-----------------------------------
+* How to handle HTTPS
+
+* Impersonate user browser
+
+* Depth control
+
+* Non-link website navigations, such as input search or click drop down menu.
+
+Storage Choices
+----------------------------------
+Google Cloud Datastore as index and task queue:
+- Insert without trasanction?
+- Fetch latest in queue with built-in sorting?
