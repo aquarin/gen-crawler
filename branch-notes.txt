@@ -1,0 +1,10 @@
+master
+=======================================
+
+
+job-scrape
+======================================
+Experimental goal to scrape job info from job websites. 
+
+Hope to use this to inspire thoughts on the overall (master branch) design.
+
