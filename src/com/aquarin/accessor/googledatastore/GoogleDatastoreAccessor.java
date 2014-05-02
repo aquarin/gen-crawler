@@ -34,12 +34,12 @@ public class GoogleDatastoreAccessor implements WideColumnStoreAccessor {
 			    .setKey(makeKey(tableName));
 	  
 	  for (String key : row.properties.keySet()) {
-		  entity.addProperty(makeProperty(key, makeValue(row.properties.get(key))));
+		  entity.addProperty(makeProperty(key, TypeUtils.getAcceptedValue(row.properties.get(key))));
 	  }
 
 		CommitRequest commitRequest = CommitRequest.newBuilder()
 		    .setMode(CommitRequest.Mode.NON_TRANSACTIONAL)
-		    .setMutation(Mutation.newBuilder().addInsertAutoId(employee))
+		    .setMutation(Mutation.newBuilder().addInsertAutoId(entity))
 		    .build();
 		try {
 			CommitResponse response = datastore.commit(commitRequest);
@@ -48,7 +48,7 @@ public class GoogleDatastoreAccessor implements WideColumnStoreAccessor {
 			throw new IOException(e);
 		}
 	  
-	  return null;
+	  return null; // TODO: return auto key here
   }
   
   private GoogleDatastoreAccessor() {
