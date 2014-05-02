@@ -1,0 +1,16 @@
+Google Datastore Accessor (at this stage):
+
+* Upload an entity without transaction
+* Query the top entity based on sorting, mark it as fetched in a transaction
+  (for task queue)
+* Read config from environment setting (to simplify the problem, damn Datastore API design!)
+
+* No support of hierarchical entities
+
+Entity Representation
+=================================
+(insert)
+* Key String (must have) + Other Properties' HashMap + List of indexed properties
+
+(fetch)
+* string as key, map of rest of properties
