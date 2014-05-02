@@ -3,8 +3,8 @@ package com.aquarin.dataabstraction.widecolumn;
 import java.io.IOException;
 
 public interface WideColumnStoreAccessor {
-  void InsertDataRow(DataRow row) throws IOException; // What's ideal return value here?
-  String InsertDataRowAutoKey(DataRow row) throws IOException;
+  void InsertDataRow(String tableName, DataRow row) throws IOException; // What's ideal return value here?
+  String InsertDataRowAutoKey(String tableName, DataRow row) throws IOException;
   
   // Query definitions to come...
 }
