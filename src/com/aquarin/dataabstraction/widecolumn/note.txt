@@ -1,0 +1,3 @@
+Wide Column describes a family of NoSQL storages that fits in the category of 
+"wide column store". Examples are Azure Table, HBase, DynamoDB, (basic features of) Google
+Datastore.
