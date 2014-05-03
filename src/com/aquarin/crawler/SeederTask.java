@@ -2,7 +2,7 @@ package com.aquarin.crawler;
 
 import java.util.Date;
 
-import com.aquarin.dataabstraction.widecolumn.DataRow;
+import com.aquarin.dataabstraction.DataRow;
 
 /**
  * A seeder task is a url fetch task that's not automated from reading 
@@ -22,6 +22,7 @@ public class SeederTask extends AbstractTaskQueueItem {
   public DataRow createDataRow() {
     DataRow datarow = new DataRow();
     datarow.properties.put("url", url);
+    datarow.properties.put("creation-date", date);
     
     return datarow;
   }
