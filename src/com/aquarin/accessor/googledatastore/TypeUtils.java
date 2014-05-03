@@ -8,6 +8,7 @@ import static com.google.api.services.datastore.client.DatastoreHelper.*;
 public class TypeUtils {
   public static Value.Builder getAcceptedValue(Object value) {
     // TODO: support more types
+    // TODO: consider design: support null
     if (value instanceof String) {
       return makeValue((String) value);
     } else if (value instanceof Integer) {
