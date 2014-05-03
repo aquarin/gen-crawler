@@ -42,7 +42,7 @@ public class GoogleDatastoreAccessor implements WideColumnStoreAccessor {
 		    .setMutation(Mutation.newBuilder().addInsertAutoId(entity))
 		    .build();
 		try {
-			CommitResponse response = datastore.commit(commitRequest);
+			CommitResponse response = datastore.commit(commitRequest); // TODO: add handling of response errors. 
 		} catch (DatastoreException e) {
 			// TODO Auto-generated catch block
 			throw new IOException(e);
