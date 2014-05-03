@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.util.Date;
 import java.util.Map;
 
 import org.junit.Test;
@@ -20,7 +21,8 @@ public class GoogleDatastoreAccessorTest {
         .createFromEnvSettings("shuishiy-dogfood");
     DataRow datarow = new DataRow();
     datarow.properties.put("testname", "GoogleDatastoreAccessorTest");
-    accessor.InsertDataRowAutoKey("test", datarow);
+    datarow.properties.put("testdate", new Date());
+    accessor.InsertDataRowAutoKey("junit-test", datarow);
   }
   
   // TODO: get rid of this after find better Google API without env var
