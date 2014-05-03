@@ -14,7 +14,7 @@ import com.google.api.services.datastore.client.DatastoreFactory;
 import com.google.api.services.datastore.client.DatastoreHelper;
 import static com.google.api.services.datastore.client.DatastoreHelper.*;
 
-import com.aquarin.dataabstraction.widecolumn.DataRow;
+import com.aquarin.dataabstraction.DataRow;
 import com.aquarin.dataabstraction.widecolumn.WideColumnStoreAccessor;
 
 public class GoogleDatastoreAccessor implements WideColumnStoreAccessor {
@@ -23,32 +23,29 @@ public class GoogleDatastoreAccessor implements WideColumnStoreAccessor {
   
   @Override
   public void InsertDataRow(String tableName, DataRow row) throws IOException {
-    // TODO Auto-generated method stub
-    
+    throw new UnsupportedOperationException("Method not implemented");
   }
 
   @Override
   public String InsertDataRowAutoKey(String tableName, DataRow row) throws IOException {
-    // TODO Auto-generated method stub
-	  Entity.Builder entity = Entity.newBuilder()
-			    .setKey(makeKey(tableName));
-	  
-	  for (String key : row.properties.keySet()) {
-		  entity.addProperty(makeProperty(key, TypeUtils.getAcceptedValue(row.properties.get(key))));
-	  }
+    Entity.Builder entity = Entity.newBuilder()
+        .setKey(makeKey(tableName));
 
-		CommitRequest commitRequest = CommitRequest.newBuilder()
-		    .setMode(CommitRequest.Mode.NON_TRANSACTIONAL)
-		    .setMutation(Mutation.newBuilder().addInsertAutoId(entity))
-		    .build();
-		try {
-			CommitResponse response = datastore.commit(commitRequest); // TODO: add handling of response errors. 
-		} catch (DatastoreException e) {
-			// TODO Auto-generated catch block
-			throw new IOException(e);
-		}
-	  
-	  return null; // TODO: return auto key here
+    for (String key : row.properties.keySet()) {
+      entity.addProperty(makeProperty(key, TypeUtils.getAcceptedValue(row.properties.get(key))));
+      }
+
+    CommitRequest commitRequest = CommitRequest.newBuilder()
+        .setMode(CommitRequest.Mode.NON_TRANSACTIONAL)
+        .setMutation(Mutation.newBuilder().addInsertAutoId(entity))
+        .build();
+    try {
+      CommitResponse response = datastore.commit(commitRequest); // TODO: add handling of response errors. 
+    } catch (DatastoreException e) {
+      throw new IOException(e);
+    }
+
+    return null; // TODO: return auto key here
   }
   
   private GoogleDatastoreAccessor() {
