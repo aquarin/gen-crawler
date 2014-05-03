@@ -15,6 +15,7 @@ import com.aquarin.dataabstraction.widecolumn.DataRow;
 
 @RunWith(JUnit4.class)
 public class GoogleDatastoreAccessorTest {
+  // TODO: move this to integration test
   @Test
   public void testInsertEntity() throws IllegalArgumentException, GeneralSecurityException, IOException {
     GoogleDatastoreAccessor accessor = GoogleDatastoreAccessor
