@@ -16,13 +16,13 @@ public class SeederTask extends AbstractTaskQueueItem {
   // TODO: design considerations: how to prioritize this? 
   // TODO: design considerations: what if the task is done?   
   private String url;
-  private Date date;
+  private Date creationDate;
   
   @Override
   public DataRow createDataRow() {
     DataRow datarow = new DataRow();
     datarow.properties.put("url", url);
-    datarow.properties.put("creation-date", date);
+    datarow.properties.put("creation-date", creationDate);
     
     return datarow;
   }
@@ -32,5 +32,7 @@ public class SeederTask extends AbstractTaskQueueItem {
   }
   
   public SeederTask(String url, Date creationDate) {    
+    this.url = url;
+    this.creationDate = creationDate;
   }
 }
