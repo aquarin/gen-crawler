@@ -1,5 +1,7 @@
 package com.aquarin.dataabstraction.widecolumn;
 
+import com.aquarin.dataabstraction.DataRow;
+
 import java.io.IOException;
 
 public interface WideColumnStoreAccessor {

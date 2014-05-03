@@ -1,4 +1,4 @@
-package com.aquarin.dataabstraction.widecolumn;
+package com.aquarin.dataabstraction;
 
 import java.util.HashMap;
 import java.util.Map;
