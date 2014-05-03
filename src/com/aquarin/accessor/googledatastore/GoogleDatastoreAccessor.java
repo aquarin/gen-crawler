@@ -55,7 +55,7 @@ public class GoogleDatastoreAccessor implements WideColumnStoreAccessor {
     
   }
 
-  public GoogleDatastoreAccessor createFromEnvSettings(String datasetId) throws IllegalArgumentException, GeneralSecurityException, IOException { // awkward signature, blame Google API
+  public static GoogleDatastoreAccessor createFromEnvSettings(String datasetId) throws IllegalArgumentException, GeneralSecurityException, IOException { // awkward signature, blame Google API
     GoogleDatastoreAccessor accessor = new GoogleDatastoreAccessor();
     accessor.datastore = DatastoreFactory.get().create(DatastoreHelper.getOptionsfromEnv()
         .dataset(datasetId).build());
